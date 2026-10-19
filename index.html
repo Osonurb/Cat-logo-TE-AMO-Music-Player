@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="cute">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff9f6">
+  <meta name="description" content="Te amo! Music Player — uma coleção de músicas para ouvir no player oficial do Suno.">
+  <title>Te amo! Music Player</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="catalog.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-theme="cute">
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="drip-layer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="app-shell">
+    <aside class="sidebar panel">
+      <a class="brand" href="#top" aria-label="Te amo! Music Player">
+        <span class="brand-mark" aria-hidden="true">♡</span>
+        <span><strong>Te amo!</strong><small>Music Player</small></span>
+      </a>
+
+      <div class="sidebar-label" data-i18n="yourSpace">SEU ESPAÇO</div>
+      <a class="nav-item active" href="#library"><span class="nav-icon" aria-hidden="true">▤</span><span data-i18n="libraryNav">Biblioteca</span></a>
+      <button class="nav-item" type="button" id="surpriseButton"><span class="nav-icon" aria-hidden="true">✦</span><span data-i18n="surprise">Surpreenda-me</span><span class="nav-dot" aria-hidden="true"></span></button>
+
+      <div class="library-heading" id="library">
+        <div><div class="sidebar-label" data-i18n="yourLibrary">SUA BIBLIOTECA</div><span class="track-count" id="trackCount">9 faixas</span></div>
+      </div>
+      <div class="track-list" id="trackList" aria-label="Biblioteca de músicas" aria-live="polite"></div>
+
+      <div class="sidebar-spacer"></div>
+      <section class="catalog-card">
+        <span class="catalog-mark" aria-hidden="true">S</span>
+        <div><strong data-i18n="catalogLabel">Catálogo Suno</strong><p data-i18n="catalogCopy">Faixas publicadas junto com o aplicativo.</p></div>
+      </section>
+      <div class="sidebar-footer"><span class="status-light"></span><span data-i18n="onlineCatalog">Catálogo disponível em todos os dispositivos</span></div>
+    </aside>
+
+    <main id="top" class="main-content">
+      <header class="topbar">
+        <div class="welcome"><span class="eyebrow" data-i18n="madeForYou">UM CANTINHO FEITO PARA VOCÊ</span><h1 data-i18n="welcomeTitle">Sua trilha, seu mundo.</h1></div>
+        <div class="top-controls">
+          <label class="select-wrap"><span class="sr-only" data-i18n="language">Idioma</span><span class="select-icon" aria-hidden="true">◎</span><select id="languageSelect" aria-label="Idioma"><option value="pt">🇧🇷 Português</option><option value="en">🇺🇸 English</option><option value="ja">🇯🇵 日本語</option></select><span class="chevron" aria-hidden="true">⌄</span></label>
+          <label class="select-wrap theme-select-wrap"><span class="select-icon" aria-hidden="true">◐</span><select id="themeSelect" aria-label="Tema"><option value="cute">♡ Fofo pastel</option><option value="gothic">☾ Tenebroso</option><option value="cyber">✦ Country cyberpunk</option><option value="custom">✿ Meu tema</option></select><span class="chevron" aria-hidden="true">⌄</span></label>
+        </div>
+      </header>
+
+      <section class="hero panel" aria-label="Mensagem do dia">
+        <div class="hero-copy"><span class="hero-kicker"><span class="sparkle" aria-hidden="true">✧</span> <span data-i18n="littleNote">UM BILHETE PARA VOCÊ</span></span><p id="lovePhrase" class="love-phrase" aria-live="polite">Eu te amo.</p><span class="phrase-caption" data-i18n="phraseCaption">Pequenos lembretes, sempre de coração.</span></div>
+        <div class="hero-art" aria-hidden="true"><span class="orbit orbit-a"></span><span class="orbit orbit-b"></span><span class="heart-shape">♥</span><span class="hero-star star-a">✦</span><span class="hero-star star-b">✧</span><span class="hero-spark">✳</span></div>
+        <span class="hero-number" aria-hidden="true">01 / ♡</span>
+      </section>
+
+      <section class="player-section" aria-labelledby="playerHeading">
+        <div class="section-title"><div><span class="eyebrow" data-i18n="officialPlayer">PLAYER OFICIAL</span><h2 id="playerHeading" data-i18n="yourMoment">Seu momento</h2></div><span class="suno-badge"><span aria-hidden="true">◉</span> SUNO</span></div>
+        <div class="suno-player-card panel">
+          <div class="suno-track-heading">
+            <div class="suno-track-art" id="sunoTrackArt" aria-hidden="true"><span id="sunoTrackNumber">♡</span><small>SUNO</small></div>
+            <div class="suno-track-copy"><div class="track-meta"><span class="playing-indicator" aria-hidden="true"><i></i><i></i><i></i></span><span class="eyebrow" data-i18n="yourSoundtrack">SUA TRILHA SONORA</span></div><h2 id="nowTitle" data-i18n="chooseTrack">Escolha uma música</h2><p id="nowSubtitle" data-i18n="embedHint">O player oficial do Suno aparecerá aqui.</p></div>
+            <a id="externalLink" class="suno-external" href="https://suno.com" target="_blank" rel="noopener noreferrer" hidden><span data-i18n="openOnSuno">Abrir no Suno</span><span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="suno-embed-shell" id="sunoEmbedContainer" aria-live="polite">
+            <div class="embed-placeholder" id="embedPlaceholder"><span class="placeholder-note" aria-hidden="true">♫</span><strong data-i18n="chooseTrack">Escolha uma música</strong><p data-i18n="embedHint">O player oficial do Suno aparecerá aqui.</p></div>
+          </div>
+          <p class="suno-attribution"><span data-i18n="sunoCredit">Reprodução incorporada pelo player oficial do</span> <strong>Suno</strong><span>.</span></p>
+        </div>
+      </section>
+
+      <section class="theme-section panel">
+        <div class="section-title compact"><div><span class="eyebrow" data-i18n="makeItYours">DO SEU JEITO</span><h2 data-i18n="themeStudio">Estúdio de temas</h2></div><button class="disclosure" id="studioToggle" aria-expanded="false" type="button" aria-label="Abrir estúdio de temas">＋</button></div>
+        <div class="theme-options" id="themeOptions">
+          <button type="button" class="theme-option selected" data-theme-choice="cute" aria-pressed="true"><span class="theme-swatch swatch-cute" aria-hidden="true">♡</span><span><b data-i18n="cuteTheme">Fofo pastel</b><small data-i18n="cuteDesc">Doce e aconchegante</small></span></button>
+          <button type="button" class="theme-option" data-theme-choice="gothic" aria-pressed="false"><span class="theme-swatch swatch-gothic" aria-hidden="true">☾</span><span><b data-i18n="gothicTheme">Tenebroso</b><small data-i18n="gothicDesc">Marrom, sombras e gotas</small></span></button>
+          <button type="button" class="theme-option" data-theme-choice="cyber" aria-pressed="false"><span class="theme-swatch swatch-cyber" aria-hidden="true">✦</span><span><b data-i18n="cyberTheme">Country cyberpunk</b><small data-i18n="cyberDesc">Velho oeste encontra neon</small></span></button>
+          <button type="button" class="theme-option" data-theme-choice="custom" aria-pressed="false"><span class="theme-swatch swatch-custom" aria-hidden="true">✿</span><span><b data-i18n="customTheme">Meu tema</b><small data-i18n="customDesc">Crie sua combinação</small></span></button>
+        </div>
+        <div class="studio-controls" id="studioControls" hidden>
+          <p class="studio-hint" data-i18n="studioHint">Ajustes organizados que atualizam as cores e formas da página em tempo real.</p>
+          <div class="color-controls"><label><span data-i18n="pageColor">Fundo</span><input type="color" id="bgColor" value="#fff5f7"></label><label><span data-i18n="accentColor">Cor principal</span><input type="color" id="accentColor" value="#d77896"></label><label><span data-i18n="cardColor">Cartões</span><input type="color" id="cardColor" value="#ffffff"></label><label class="range-setting"><span data-i18n="roundness">Arredondamento</span><input type="range" min="8" max="32" value="22" id="roundness"><output id="roundnessValue">22px</output></label><label class="font-setting"><span data-i18n="typeface">Tipografia</span><select id="themeFont"><option value="rounded" data-i18n="fontRounded">Arredondada</option><option value="editorial" data-i18n="fontEditorial">Editorial</option><option value="tech" data-i18n="fontTech">Tecnológica</option></select></label></div>
+          <button id="saveCustomTheme" class="save-theme" type="button" data-i18n="saveTheme">Salvar meu tema</button>
+        </div>
+      </section>
+
+      <footer class="page-footer"><span aria-hidden="true">♡</span> <span data-i18n="footerLine">Feito com carinho, para acompanhar o que você sente.</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
