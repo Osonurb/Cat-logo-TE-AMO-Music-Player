@@ -14,6 +14,7 @@
   <div class="ambient ambient-one" aria-hidden="true"></div>
   <div class="ambient ambient-two" aria-hidden="true"></div>
   <div class="drip-layer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <button class="player-backdrop" id="playerBackdrop" type="button" aria-label="Fechar player expandido" hidden></button>
   <div class="app-shell">
     <aside class="sidebar panel">
       <a class="brand" href="#top" aria-label="Te amo! Music Player">
@@ -25,7 +26,7 @@
       <a class="nav-item active" href="#library"><span class="nav-icon" aria-hidden="true">▤</span><span data-i18n="libraryNav">Biblioteca</span></a>
       <button class="nav-item" type="button" id="surpriseButton"><span class="nav-icon" aria-hidden="true">✦</span><span data-i18n="surprise">Surpreenda-me</span><span class="nav-dot" aria-hidden="true"></span></button>
 
-      <div class="library-heading" id="library">
+      <div class="library-heading" id="library" tabindex="-1">
         <div><div class="sidebar-label" data-i18n="yourLibrary">SUA BIBLIOTECA</div><span class="track-count" id="trackCount">9 faixas</span></div>
       </div>
       <div class="track-list" id="trackList" aria-label="Biblioteca de músicas" aria-live="polite"></div>
@@ -53,13 +54,17 @@
         <span class="hero-number" aria-hidden="true">01 / ♡</span>
       </section>
 
-      <section class="player-section" aria-labelledby="playerHeading">
+      <section class="player-section" id="playerSection" aria-labelledby="playerHeading">
         <div class="section-title"><div><span class="eyebrow" data-i18n="officialPlayer">PLAYER OFICIAL</span><h2 id="playerHeading" data-i18n="yourMoment">Seu momento</h2></div><span class="suno-badge"><span aria-hidden="true">◉</span> SUNO</span></div>
-        <div class="suno-player-card panel">
+        <div class="suno-player-card panel" id="sunoPlayerCard">
           <div class="suno-track-heading">
             <div class="suno-track-art" id="sunoTrackArt" aria-hidden="true"><span id="sunoTrackNumber">♡</span><small>SUNO</small></div>
             <div class="suno-track-copy"><div class="track-meta"><span class="playing-indicator" aria-hidden="true"><i></i><i></i><i></i></span><span class="eyebrow" data-i18n="yourSoundtrack">SUA TRILHA SONORA</span></div><h2 id="nowTitle" data-i18n="chooseTrack">Escolha uma música</h2><p id="nowSubtitle" data-i18n="embedHint">O player oficial do Suno aparecerá aqui.</p></div>
-            <a id="externalLink" class="suno-external" href="https://suno.com" target="_blank" rel="noopener noreferrer" hidden><span data-i18n="openOnSuno">Abrir no Suno</span><span aria-hidden="true">↗</span></a>
+            <div class="player-actions">
+              <button class="suno-action-button" id="backToCatalog" type="button"><span data-i18n="backToCatalog">Voltar ao catálogo</span><span aria-hidden="true">↑</span></button>
+              <button class="suno-action-button" id="expandPlayer" type="button" aria-expanded="false" aria-controls="sunoEmbedContainer"><span id="expandPlayerLabel" data-i18n="expandPlayer">Expandir player</span><span id="expandPlayerIcon" aria-hidden="true">⤢</span></button>
+              <a id="externalLink" class="suno-external" href="https://suno.com" target="_blank" rel="noopener noreferrer" hidden><span data-i18n="openOnSuno">Abrir no Suno</span><span aria-hidden="true">↗</span></a>
+            </div>
           </div>
           <div class="suno-embed-shell" id="sunoEmbedContainer" aria-live="polite">
             <div class="embed-placeholder" id="embedPlaceholder"><span class="placeholder-note" aria-hidden="true">♫</span><strong data-i18n="chooseTrack">Escolha uma música</strong><p data-i18n="embedHint">O player oficial do Suno aparecerá aqui.</p></div>

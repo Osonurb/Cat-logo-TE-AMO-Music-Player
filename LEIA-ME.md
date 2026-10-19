@@ -11,9 +11,9 @@ Player estático em HTML, CSS e JavaScript. O catálogo padrão é publicado com
 
 ## Testar no navegador
 
-Abra `index.html` em um navegador com acesso à internet. A primeira faixa aparece selecionada; as outras oito aparecem na biblioteca. Escolher uma faixa cria o iframe oficial correspondente e substitui o player anterior. O link **Abrir no Suno** abre a página oficial daquela música.
+Abra `index.html` em um navegador com acesso à internet. A primeira faixa aparece selecionada; as outras oito aparecem na biblioteca. Ao escolher outra faixa, o mesmo iframe oficial é reutilizado com o endereço daquela música e o player recebe foco visual por rolagem suave se estiver fora da tela. Os controles **Voltar ao catálogo** e **Expandir player** ajudam na navegação. O link **Abrir no Suno** abre a página oficial daquela música.
 
-As incorporações usam `loading="lazy"` e só é criado o iframe da faixa atual. O áudio continua hospedado e servido pelo Suno; o aplicativo não baixa nem copia o áudio. A disponibilidade depende de cada faixa e das permissões definidas no Suno.
+A primeira incorporação usa `loading="lazy"`; há apenas um iframe na página, reutilizado quando a seleção muda. A seleção não inicia a reprodução automaticamente: use os controles do player oficial do Suno. O aplicativo não acessa o conteúdo interno desse iframe nem baixa ou copia o áudio. A disponibilidade depende de cada faixa e das permissões definidas no Suno.
 
 Os títulos provisórios estão em português no campo `title` de `catalog.js`. A interface apresenta os números traduzidos como `Track 1` em inglês e `音楽 1` em japonês. Para editar um título, altere o campo correspondente e publique a atualização.
 

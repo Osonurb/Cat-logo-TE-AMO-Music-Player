@@ -13,7 +13,7 @@
       catalogLabel: 'Catálogo Suno', catalogCopy: 'Faixas publicadas junto com o aplicativo.', onlineCatalog: 'Catálogo disponível em todos os dispositivos',
       madeForYou: 'UM CANTINHO FEITO PARA VOCÊ', welcomeTitle: 'Sua trilha, seu mundo.', language: 'Idioma',
       littleNote: 'UM BILHETE PARA VOCÊ', phraseCaption: 'Pequenos lembretes, sempre de coração.', officialPlayer: 'PLAYER OFICIAL', yourMoment: 'Seu momento', yourSoundtrack: 'SUA TRILHA SONORA',
-      chooseTrack: 'Escolha uma música', embedHint: 'O player oficial do Suno aparecerá aqui.', openOnSuno: 'Abrir no Suno', sunoCredit: 'Reprodução incorporada pelo player oficial do',
+      chooseTrack: 'Escolha uma música', embedHint: 'O player oficial do Suno aparecerá aqui.', openOnSuno: 'Abrir no Suno', backToCatalog: 'Voltar ao catálogo', expandPlayer: 'Expandir player', collapsePlayer: 'Recolher player', sunoCredit: 'Reprodução incorporada pelo player oficial do',
       trackCount: (n) => `${n} ${n === 1 ? 'faixa' : 'faixas'}`, sourceSuno: 'Player oficial Suno', frameTitle: (title) => `Player oficial do Suno: ${title}`,
       makeItYours: 'DO SEU JEITO', themeStudio: 'Estúdio de temas', cuteTheme: 'Fofo pastel', cuteDesc: 'Doce e aconchegante', gothicTheme: 'Tenebroso', gothicDesc: 'Marrom, sombras e gotas', cyberTheme: 'Country cyberpunk', cyberDesc: 'Velho oeste encontra neon', customTheme: 'Meu tema', customDesc: 'Crie sua combinação',
       studioHint: 'Ajustes organizados que atualizam as cores e formas da página em tempo real.', pageColor: 'Fundo', accentColor: 'Cor principal', cardColor: 'Cartões', roundness: 'Arredondamento', typeface: 'Tipografia', fontRounded: 'Arredondada', fontEditorial: 'Editorial', fontTech: 'Tecnológica', saveTheme: 'Salvar meu tema',
@@ -27,7 +27,7 @@
       catalogLabel: 'Suno catalog', catalogCopy: 'Tracks published with the app.', onlineCatalog: 'Catalog available on every device',
       madeForYou: 'A LITTLE SPACE JUST FOR YOU', welcomeTitle: 'Your soundtrack, your world.', language: 'Language',
       littleNote: 'A LITTLE NOTE FOR YOU', phraseCaption: 'Small reminders, always from the heart.', officialPlayer: 'OFFICIAL PLAYER', yourMoment: 'Your moment', yourSoundtrack: 'YOUR SOUNDTRACK',
-      chooseTrack: 'Choose a song', embedHint: 'The official Suno player will appear here.', openOnSuno: 'Open in Suno', sunoCredit: 'Embedded playback from the official',
+      chooseTrack: 'Choose a song', embedHint: 'The official Suno player will appear here.', openOnSuno: 'Open in Suno', backToCatalog: 'Back to catalog', expandPlayer: 'Expand player', collapsePlayer: 'Close expanded player', sunoCredit: 'Embedded playback from the official',
       trackCount: (n) => `${n} ${n === 1 ? 'track' : 'tracks'}`, sourceSuno: 'Official Suno player', frameTitle: (title) => `Official Suno player: ${title}`,
       makeItYours: 'MAKE IT YOURS', themeStudio: 'Theme studio', cuteTheme: 'Soft pastel', cuteDesc: 'Sweet and cozy', gothicTheme: 'Gothic', gothicDesc: 'Brown, shadows and drips', cyberTheme: 'Country cyberpunk', cyberDesc: 'The Wild West meets neon', customTheme: 'My theme', customDesc: 'Make your own mix',
       studioHint: 'Simple controls update the page colors and shapes in real time.', pageColor: 'Background', accentColor: 'Accent', cardColor: 'Cards', roundness: 'Roundness', typeface: 'Typeface', fontRounded: 'Rounded', fontEditorial: 'Editorial', fontTech: 'Tech', saveTheme: 'Save my theme',
@@ -41,7 +41,7 @@
       catalogLabel: 'Suno カタログ', catalogCopy: 'アプリと一緒に公開された曲です。', onlineCatalog: 'すべての端末で利用できるカタログ',
       madeForYou: 'あなたのための小さな場所', welcomeTitle: 'あなたの音楽、あなたの世界。', language: '言語',
       littleNote: 'あなたへのメッセージ', phraseCaption: '心からの、小さなメッセージ。', officialPlayer: '公式プレイヤー', yourMoment: 'あなたの時間', yourSoundtrack: 'あなたのサウンドトラック',
-      chooseTrack: '曲を選んでください', embedHint: 'ここにSuno公式プレイヤーが表示されます。', openOnSuno: 'Sunoで開く', sunoCredit: '公式プレイヤーで再生：',
+      chooseTrack: '曲を選んでください', embedHint: 'ここにSuno公式プレイヤーが表示されます。', openOnSuno: 'Sunoで開く', backToCatalog: 'カタログに戻る', expandPlayer: 'プレイヤーを拡大', collapsePlayer: '拡大表示を閉じる', sunoCredit: '公式プレイヤーで再生：',
       trackCount: (n) => `${n} 曲`, sourceSuno: 'Suno公式プレイヤー', frameTitle: (title) => `Suno公式プレイヤー：${title}`,
       makeItYours: 'あなたらしく', themeStudio: 'テーマスタジオ', cuteTheme: 'パステル', cuteDesc: '優しくて居心地のよい', gothicTheme: 'ダーク', gothicDesc: 'ブラウン、影、したたる雫', cyberTheme: 'カントリー・サイバーパンク', cyberDesc: '西部劇とネオンの融合', customTheme: 'マイテーマ', customDesc: '好きな色で作成',
       studioHint: '色や形を調整すると、ページにすぐ反映されます。', pageColor: '背景', accentColor: 'アクセント', cardColor: 'カード', roundness: '角の丸み', typeface: '書体', fontRounded: '丸み', fontEditorial: 'エディトリアル', fontTech: 'テクノロジー', saveTheme: 'テーマを保存',
@@ -68,6 +68,7 @@
     currentId: null,
     phraseIndex: Number.isInteger(savedPhraseIndex) && savedPhraseIndex >= 0 ? savedPhraseIndex % messages.pt.phrases.length : -1,
     lastPhraseTime: 0,
+    playerExpanded: false,
     toastTimer: null
   };
 
@@ -138,14 +139,52 @@
       indicator.textContent = track.id === state.currentId ? '♫' : '▶';
       indicator.setAttribute('aria-hidden', 'true');
       row.append(number, detail, indicator);
-      row.addEventListener('click', () => selectTrack(track.id));
+      row.addEventListener('click', () => selectTrack(track.id, true));
       list.append(row);
     });
   }
 
-  function selectTrack(id) {
+  function updateTrackSelection() {
+    Array.from(byId('trackList').children).forEach((row) => {
+      const selected = row.dataset.trackId === state.currentId;
+      row.classList.toggle('is-active', selected);
+      row.setAttribute('aria-current', String(selected));
+      const indicator = row.children[2];
+      if (indicator) indicator.textContent = selected ? '♫' : '▶';
+    });
+  }
+
+  function scrollToPlayer() {
+    const section = byId('playerSection');
+    if (typeof section.scrollIntoView !== 'function') return;
+    const bounds = section.getBoundingClientRect();
+    if (bounds.top >= 0 && bounds.bottom <= window.innerHeight) return;
+    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+    section.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
+  }
+
+  function scrollToCatalog() {
+    const catalogHeading = byId('library');
+    catalogHeading.focus({ preventScroll: true });
+    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches;
+    catalogHeading.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'center' });
+  }
+
+  function setPlayerExpanded(expanded) {
+    state.playerExpanded = expanded;
+    byId('sunoPlayerCard').classList.toggle('is-expanded', expanded);
+    byId('playerBackdrop').hidden = !expanded;
+    byId('playerBackdrop').setAttribute('aria-label', tr('collapsePlayer'));
+    byId('expandPlayer').setAttribute('aria-expanded', String(expanded));
+    document.body.classList.toggle('player-expanded', expanded);
+    byId('expandPlayerLabel').textContent = tr(expanded ? 'collapsePlayer' : 'expandPlayer');
+    byId('expandPlayerIcon').textContent = expanded ? '⤡' : '⤢';
+  }
+
+  function selectTrack(id, shouldScroll = false) {
     const track = catalog.find((item) => item.id === id);
     if (!track) return;
+    const sameTrack = state.currentId === id;
     state.currentId = id;
     const title = titleFor(track);
     byId('nowTitle').textContent = title;
@@ -156,17 +195,22 @@
     externalLink.href = track.externalUrl;
     externalLink.hidden = false;
 
-    const frame = document.createElement('iframe');
-    frame.className = 'suno-embed';
-    frame.id = 'sunoIframe';
-    frame.src = track.embedUrl;
+    let frame = byId('sunoIframe');
+    if (!frame) {
+      frame = document.createElement('iframe');
+      frame.className = 'suno-embed';
+      frame.id = 'sunoIframe';
+      byId('sunoEmbedContainer').replaceChildren(frame);
+    }
+    if (!sameTrack || frame.dataset.trackId !== id) frame.src = track.embedUrl;
+    frame.dataset.trackId = id;
     frame.title = tr('frameTitle', title);
     frame.loading = 'lazy';
     frame.allow = 'autoplay; encrypted-media; picture-in-picture; web-share';
     frame.setAttribute('allowfullscreen', '');
     frame.referrerPolicy = 'strict-origin-when-cross-origin';
-    byId('sunoEmbedContainer').replaceChildren(frame);
-    renderTracks();
+    updateTrackSelection();
+    if (shouldScroll) scrollToPlayer();
   }
 
   function setLanguage(language) {
@@ -181,6 +225,10 @@
     Array.from(byId('themeSelect').options).forEach((option) => { option.textContent = themeNames[option.value]; });
     byId('trackList').setAttribute('aria-label', tr('yourLibrary'));
     byId('trackCount').textContent = tr('trackCount', catalog.length);
+    byId('backToCatalog').setAttribute('aria-label', tr('backToCatalog'));
+    byId('expandPlayer').setAttribute('aria-label', tr(state.playerExpanded ? 'collapsePlayer' : 'expandPlayer'));
+    byId('expandPlayerLabel').textContent = tr(state.playerExpanded ? 'collapsePlayer' : 'expandPlayer');
+    byId('playerBackdrop').setAttribute('aria-label', tr('collapsePlayer'));
     renderTracks();
     if (state.currentId) {
       const current = catalog.find((track) => track.id === state.currentId);
@@ -266,6 +314,12 @@
   function wireEvents() {
     byId('languageSelect').addEventListener('change', (event) => setLanguage(event.target.value));
     byId('themeSelect').addEventListener('change', (event) => setTheme(event.target.value));
+    byId('backToCatalog').addEventListener('click', scrollToCatalog);
+    byId('expandPlayer').addEventListener('click', () => setPlayerExpanded(!state.playerExpanded));
+    byId('playerBackdrop').addEventListener('click', () => {
+      setPlayerExpanded(false);
+      byId('expandPlayer').focus();
+    });
     document.querySelectorAll('[data-theme-choice]').forEach((button) => button.addEventListener('click', () => setTheme(button.dataset.themeChoice)));
     byId('studioToggle').addEventListener('click', () => {
       const controls = byId('studioControls');
@@ -293,6 +347,11 @@
       nextPhrase();
     });
     document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && state.playerExpanded) {
+        setPlayerExpanded(false);
+        byId('expandPlayer').focus();
+        return;
+      }
       if ((event.key === 'Enter' || event.key === ' ') && event.target.matches('button')) {
         const now = Date.now();
         if (now - state.lastPhraseTime >= 1800) { state.lastPhraseTime = now; nextPhrase(); }
